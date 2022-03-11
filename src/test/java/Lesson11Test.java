@@ -13,7 +13,7 @@ public class Lesson11Test {
 
         driver.findElement(By.linkText(elements.get(8).getText())).click();
 
-        driver.get("https://admin:admin@" +driver.getCurrentUrl().substring(8));
+        driver.get("https://admin:admin@" + driver.getCurrentUrl().substring(8));
         String result = driver.findElement(By.cssSelector("div.example > p")).getText();
         Assert.assertEquals("Congratulations! You must have the proper credentials.",result);
         driver.quit();

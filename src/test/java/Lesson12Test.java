@@ -1,49 +1,67 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class Lesson12Test {
+    WebDriver driver;
+
+    @BeforeMethod
+    public void setup() {
+        driver = new ChromeDriver();
+        driver.get("https://litecart.stqa.ru/en/");
+    }
 
     @Test
     public void InitTest() {
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://litecart.stqa.ru/en/");
-        String title = driver.getTitle();
-        String result = "Online Store | My Store1";
-        Assert.assertEquals(title,result);
-        driver.quit();
+        String expected = driver.getTitle();
+        String actual = "Online Store | My Store1";
+        Assert.assertEquals(actual,expected);
     }
+
     @Test
     public  void findRubberDucks() {
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://litecart.stqa.ru/en/");
         driver.findElement(By.linkText("Rubber Ducks")).sendKeys(Keys.ENTER);
-        Assert.assertEquals(driver.getTitle(),"Rubber Ducks | My Store1");
-        driver.quit();
+        Assert.assertEquals("Rubber Ducks | My Store1",driver.getTitle());
     }
+
+    @Test
+    public  void findElementSubcategory() {
+        WebElement elementRubber = driver.findElement(By.linkText("Rubber Ducks"));
+        Actions builder = new Actions(driver);
+        builder.moveToElement(elementRubber).perform();
+        WebElement Subcategory = driver.findElement(By.linkText("Subcategory"));
+        builder.moveToElement(Subcategory).click().perform();
+        Assert.assertEquals("Subcategory | My Store1",driver.getTitle());
+
+
+    }
+
     @Test
     public void findDeliveryInformation() {
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://litecart.stqa.ru/en/");
         driver.findElement(By.linkText("Delivery Information")).click();
-        String result = driver.findElement(By.cssSelector("#box-information-links>.title")).getText();
-        String infTitle = "Information";
-        Assert.assertEquals(result,infTitle);
-        driver.quit();
+        String expected = driver.findElement(By.cssSelector("#box-information-links>.title")).getText();
+        String actual = "Information";
+        Assert.assertEquals(actual,expected);
     }
+
     @Test
     public void findTermsConditions() {
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://litecart.stqa.ru/en/");
         driver.findElement(By.xpath("//*[@id='site-menu']/ul/li[5]/a")).click();
         String result = driver.findElement(By.cssSelector("#main > div.middle > div.content > h1 > font > font > u")).
                 getText();
         boolean infoTermsConditions = result.contains("Условия");
         Assert.assertTrue(infoTermsConditions);
+    }
+
+    @AfterMethod
+    public void after() {
+
         driver.quit();
     }
 }
