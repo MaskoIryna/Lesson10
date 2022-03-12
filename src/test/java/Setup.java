@@ -20,7 +20,7 @@ public class Setup {
 
         @AfterMethod
         public void after() {
- //           driver.quit();
+            driver.quit();
         }
     }
 
