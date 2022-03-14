@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Collections;
+import java.util.Locale;
 
 public class Lesson13Test extends Setup {
 
@@ -66,7 +67,7 @@ public class Lesson13Test extends Setup {
         }
         Assert.assertEquals(actual,expected);
     }
-    //Yellow Duck is SALE
+//Yellow Duck is SALE
     @Test
     public void findElementSale() {
         WebElement elementRubber = driver.findElement(By.linkText("Rubber Ducks"));
@@ -81,7 +82,7 @@ public class Lesson13Test extends Setup {
 
         Assert.assertTrue(expected);
     }
-    //Green DucK is NEW
+//Green DucK is NEW
     @Test
     public void findElementNew() {
         WebElement elementRubber = driver.findElement(By.linkText("Rubber Ducks"));
@@ -92,13 +93,11 @@ public class Lesson13Test extends Setup {
         builder.moveToElement(Subcategory).click().perform();
 
         String expectedString = driver.findElement(By.xpath("//a[@class='link'][@title='Green DucK']")).getAccessibleName();
-        boolean expectedGreen = expectedString.contains("Green");
-        boolean expectedNew = expectedString.contains("new");
-//        boolean expected = expectedGreen * expectedNew ;
-//        Assert.assertTrue(expected);
+        boolean expectedGreen = expectedString.toLowerCase().contains("Green Duck".toLowerCase());
+        boolean expectedNew = expectedString.toLowerCase().contains("NEW".toLowerCase());
+        boolean expected = expectedGreen && expectedNew ;
+        Assert.assertTrue(expected);
     }
-
-
 
 }
 
