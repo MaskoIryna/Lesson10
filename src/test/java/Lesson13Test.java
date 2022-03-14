@@ -66,6 +66,40 @@ public class Lesson13Test extends Setup {
         }
         Assert.assertEquals(actual,expected);
     }
+    //Yellow Duck is SALE
+    @Test
+    public void findElementSale() {
+        WebElement elementRubber = driver.findElement(By.linkText("Rubber Ducks"));
+        Actions builder = new Actions(driver);
+        builder.moveToElement(elementRubber).perform();
+
+        WebElement Subcategory = driver.findElement(By.linkText("Subcategory"));
+        builder.moveToElement(Subcategory).click().perform();
+
+        boolean expected = driver.findElement(By.xpath("//img[@alt='Yellow Duck']/following-sibling::div")).getText().
+                contains("SALE");
+
+        Assert.assertTrue(expected);
+    }
+    //Green DucK is NEW
+    @Test
+    public void findElementNew() {
+        WebElement elementRubber = driver.findElement(By.linkText("Rubber Ducks"));
+        Actions builder = new Actions(driver);
+        builder.moveToElement(elementRubber).perform();
+
+        WebElement Subcategory = driver.findElement(By.linkText("Subcategory"));
+        builder.moveToElement(Subcategory).click().perform();
+
+        String expectedString = driver.findElement(By.xpath("//a[@class='link'][@title='Green DucK']")).getAccessibleName();
+        boolean expectedGreen = expectedString.contains("Green");
+        boolean expectedNew = expectedString.contains("new");
+//        boolean expected = expectedGreen * expectedNew ;
+//        Assert.assertTrue(expected);
+    }
+
+
+
 }
 
 
