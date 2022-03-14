@@ -7,6 +7,7 @@ import java.util.List;
 public class Lesson11Test {
     @Test
     public void mySecondTest(){
+       //Go to the 8 link
         WebDriver driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/");
         List<WebElement> elements = driver.findElements(By.tagName("a"));
