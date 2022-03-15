@@ -3,13 +3,10 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.security.Key;
 import java.time.Duration;
 
 
@@ -36,6 +33,7 @@ public class Lesson13FrameTest {
         String expected = driver.findElement(By.tagName("p")).getText();
         driver.switchTo().defaultContent();
         Assert.assertEquals("Hello World",expected);
+        driver.quit();
 
 
     }
