@@ -14,20 +14,20 @@ public class Lesson12Test {
         driver = new ChromeDriver();
         driver.get("https://litecart.stqa.ru/en/");
     }
-
+//Test get title jf https://litecart.stqa.ru/en/
     @Test
     public void InitTest() {
         String expected = driver.getTitle();
         String actual = "Online Store | My Store1";
         Assert.assertEquals(actual,expected);
     }
-
+//Test go to Rubber Ducks
     @Test
     public  void findRubberDucks() {
         driver.findElement(By.linkText("Rubber Ducks")).sendKeys(Keys.ENTER);
         Assert.assertEquals("Rubber Ducks | My Store1",driver.getTitle());
     }
-
+//Test go to Delivery Information
     @Test
     public void findDeliveryInformation() {
         driver.findElement(By.linkText("Delivery Information")).click();
@@ -35,7 +35,7 @@ public class Lesson12Test {
         String actual = "Information";
         Assert.assertEquals(actual,expected);
     }
-
+//Test go to TermsConditions
     @Test
     public void findTermsConditions() {
         driver.findElement(By.xpath("//*[@id='site-menu']/ul/li[5]/a")).click();

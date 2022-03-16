@@ -16,6 +16,7 @@ public class Lesson13WindowTest {
             driver.get("https://the-internet.herokuapp.com/");
             }
         @Test
+//Test go to https://the-internet.herokuapp.com/windows and click "Click Here"(new windows)
         public void newTest() {
             String initHandle = driver.getWindowHandle();
             driver.findElement(By.linkText("Multiple Windows")).click();

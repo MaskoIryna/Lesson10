@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.example</groupId>
     <artifactId>Lesson10</artifactId>
-    <version>1.0</version>
+    <version><![CDATA[1.0]]></version>
     <dependencies>
         <dependency>
             <groupId>org.testng</groupId>
