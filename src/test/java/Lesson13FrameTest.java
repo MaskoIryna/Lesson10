@@ -11,6 +11,7 @@ import java.time.Duration;
 
 
 public class Lesson13FrameTest {
+// Test go to https://the-internet.herokuapp.com/iframe and write something
     @Test
     public void FrameTest() {
         WebDriver driver = new ChromeDriver();
