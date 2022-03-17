@@ -16,7 +16,7 @@ public class Lesson12Test {
     }
 //Test get title jf https://litecart.stqa.ru/en/
     @Test
-    public void InitTest() {
+    public void initTest() {
         String expected = driver.getTitle();
         String actual = "Online Store | My Store1";
         Assert.assertEquals(actual,expected);
