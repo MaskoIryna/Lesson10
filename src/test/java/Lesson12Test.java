@@ -24,7 +24,7 @@ public class Lesson12Test {
 //Test go to Rubber Ducks
     @Test
     public  void findRubberDucks() {
-        driver.findElement(By.linkText("Rubber Ducks")).sendKeys(Keys.ENTER);
+        driver.findElement(By.linkText("Rubber Ducks")).click();
         Assert.assertEquals("Rubber Ducks | My Store1",driver.getTitle());
     }
 //Test go to Delivery Information
