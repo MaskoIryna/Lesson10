@@ -47,8 +47,8 @@ public class Lesson13Test extends Setup {
     @Test
     public void clickPrice() {
         driver.findElement(By.linkText("Rubber Ducks")).click();
-        var actual = new ArrayList<Float>();
-        var expected = new ArrayList<Float>();
+        ArrayList<Float> actual = new ArrayList<Float>();
+        ArrayList<Float> expected = new ArrayList<Float>();
 //List before click "Price"
         List<WebElement> priceBeforeClick = driver.findElements(By.xpath("//span[@class='price']"));
         for (WebElement counter : priceBeforeClick) {
