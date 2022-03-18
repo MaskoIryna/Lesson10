@@ -6,7 +6,12 @@
 
     <groupId>org.example</groupId>
     <artifactId>Lesson10</artifactId>
-    <version><![CDATA[1.0]]></version>
+    <version>1.0</version>
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <seleniumVersion>4.1.2</seleniumVersion>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>org.testng</groupId>
@@ -38,15 +43,9 @@
         </dependency>
         <dependency>
             <groupId>be.atbash.keys</groupId>
-            <artifactId>keys-server-parent</artifactId>
+            <artifactId>keymanager</artifactId>
             <version>0.5</version>
-            <scope>compile</scope>
+            <type>pom</type>
         </dependency>
     </dependencies>
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <seleniumVersion>4.1.2</seleniumVersion>
-    </properties>
-
 </project>
