@@ -24,7 +24,7 @@ public class Lesson13Test extends Setup {
 
 
     @Test
-    public void clickName() {
+    public void clickNameAndSortTest() {
         driver.findElement(By.linkText("Rubber Ducks")).click();
         ArrayList<String> actual = new ArrayList<String>();
         ArrayList<String> expected = new ArrayList<String>();
@@ -45,7 +45,7 @@ public class Lesson13Test extends Setup {
     }
 
     @Test
-    public void clickPrice() {
+    public void clickPriceAndSortTest() {
         driver.findElement(By.linkText("Rubber Ducks")).click();
         ArrayList<Float> actual = new ArrayList<Float>();
         ArrayList<Float> expected = new ArrayList<Float>();
@@ -69,7 +69,7 @@ public class Lesson13Test extends Setup {
     }
 //Yellow Duck is SALE
     @Test
-    public void findElementSale() {
+    public void findElementSaleTest() {
         WebElement elementRubber = driver.findElement(By.linkText("Rubber Ducks"));
         Actions builder = new Actions(driver);
         builder.moveToElement(elementRubber).perform();
@@ -84,7 +84,7 @@ public class Lesson13Test extends Setup {
     }
 //Green DucK is NEW
     @Test
-    public void findElementNew() {
+    public void greenDuckNewElementTest() {
         WebElement elementRubber = driver.findElement(By.linkText("Rubber Ducks"));
         Actions builder = new Actions(driver);
         builder.moveToElement(elementRubber).perform();

@@ -23,14 +23,14 @@ public class Lesson12Test {
     }
 //Test go to Rubber Ducks
     @Test
-    public  void findRubberDucks() {
+    public  void findRubberDucksTest() {
         driver.findElement(By.linkText("Rubber Ducks")).click();
         String expected ="Rubber Ducks | My Store1";
         Assert.assertEquals(driver.getTitle(),expected);
     }
 //Test go to Delivery Information
     @Test
-    public void findDeliveryInformation() {
+    public void findDeliveryInformationTest() {
         driver.findElement(By.linkText("Delivery Information")).click();
         String actual = driver.findElement(By.cssSelector("#box-information-links>.title")).getText();
         String expected = "Information";
@@ -38,7 +38,7 @@ public class Lesson12Test {
     }
 //Test go to TermsConditions
     @Test
-    public void findTermsConditions() {
+    public void findTermsConditionsTest() {
         driver.findElement(By.xpath("//*[@id='site-menu']/ul/li[5]/a")).click();
         String result = driver.findElement(By.cssSelector("#main > div.middle > div.content > h1 > font > font > u")).
                 getText();

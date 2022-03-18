@@ -13,7 +13,7 @@ import java.time.Duration;
 public class Lesson13FrameTest {
 // Test go to https://the-internet.herokuapp.com/iframe and write something
     @Test
-    public void FrameTest() {
+    public void goFrameAndWriteTest() {
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://the-internet.herokuapp.com/");
@@ -34,7 +34,7 @@ public class Lesson13FrameTest {
         String actual = driver.findElement(By.tagName("p")).getText();
         driver.switchTo().defaultContent();
         String expected = "Hello World";
-        Assert.assertEquals(actual,"Hello World");
+        Assert.assertEquals(actual,expected);
         driver.quit();
 
 
