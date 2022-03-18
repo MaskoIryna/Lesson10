@@ -11,6 +11,7 @@ import java.util.Collections;
 public class Lesson13Test extends Setup {
 
     @Test
+    //
     public void findElementSubcategory() {
         WebElement elementRubber = driver.findElement(By.linkText("Rubber Ducks"));
         Actions builder = new Actions(driver);
@@ -24,6 +25,7 @@ public class Lesson13Test extends Setup {
 
 
     @Test
+    //
     public void clickNameAndSortTest() {
         driver.findElement(By.linkText("Rubber Ducks")).click();
         ArrayList<String> actual = new ArrayList<String>();
@@ -45,6 +47,7 @@ public class Lesson13Test extends Setup {
     }
 
     @Test
+    //
     public void clickPriceAndSortTest() {
         driver.findElement(By.linkText("Rubber Ducks")).click();
         ArrayList<Float> actual = new ArrayList<Float>();
@@ -69,6 +72,7 @@ public class Lesson13Test extends Setup {
     }
     //Yellow Duck is SALE
     @Test
+    //
     public void findElementSaleTest() {
         WebElement elementRubber = driver.findElement(By.linkText("Rubber Ducks"));
         Actions builder = new Actions(driver);
