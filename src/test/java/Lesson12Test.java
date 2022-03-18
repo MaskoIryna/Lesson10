@@ -17,22 +17,23 @@ public class Lesson12Test {
 //Test get title jf https://litecart.stqa.ru/en/
     @Test
     public void initTest() {
-        String expected = driver.getTitle();
-        String actual = "Online Store | My Store1";
+        String actual = driver.getTitle();
+        String expected = "Online Store | My Store1";
         Assert.assertEquals(actual,expected);
     }
 //Test go to Rubber Ducks
     @Test
     public  void findRubberDucks() {
         driver.findElement(By.linkText("Rubber Ducks")).click();
-        Assert.assertEquals("Rubber Ducks | My Store1",driver.getTitle());
+        String expected ="Rubber Ducks | My Store1";
+        Assert.assertEquals(driver.getTitle(),expected);
     }
 //Test go to Delivery Information
     @Test
     public void findDeliveryInformation() {
         driver.findElement(By.linkText("Delivery Information")).click();
-        String expected = driver.findElement(By.cssSelector("#box-information-links>.title")).getText();
-        String actual = "Information";
+        String actual = driver.findElement(By.cssSelector("#box-information-links>.title")).getText();
+        String expected = "Information";
         Assert.assertEquals(actual,expected);
     }
 //Test go to TermsConditions

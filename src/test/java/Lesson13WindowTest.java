@@ -24,8 +24,9 @@ public class Lesson13WindowTest {
 
             String newHandle = driver.getWindowHandles().toArray()[1].toString();
             driver.switchTo().window(newHandle);
-            String expected = driver.findElement(By.tagName("h3")).getText();
-            Assert.assertEquals("New Window",expected);
+            String actual = driver.findElement(By.tagName("h3")).getText();
+
+            Assert.assertEquals(actual,"New Window");
             driver.close();
             driver.switchTo().window(initHandle);
         }

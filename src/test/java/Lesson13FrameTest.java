@@ -31,9 +31,10 @@ public class Lesson13FrameTest {
         driver.switchTo().defaultContent();
         driver.findElement(By.xpath("//button[@title='Italic']")).click();
         driver.switchTo().frame("mce_0_ifr");
-        String expected = driver.findElement(By.tagName("p")).getText();
+        String actual = driver.findElement(By.tagName("p")).getText();
         driver.switchTo().defaultContent();
-        Assert.assertEquals("Hello World",expected);
+        String expected = "Hello World";
+        Assert.assertEquals(actual,"Hello World");
         driver.quit();
 
 
