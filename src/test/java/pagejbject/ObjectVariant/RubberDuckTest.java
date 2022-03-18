@@ -1,18 +1,10 @@
-package pagejbject;
-import org.checkerframework.checker.units.qual.A;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+package pagejbject.ObjectVariant;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pagejbject.pages.InitClass;
-import pagejbject.pages.RubberDucksPage;
+import pagejbject.ObjectVariant.pages.InitClass;
+import pagejbject.ObjectVariant.pages.RubberDucksPage;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
-public class RubberDuckTest extends InitClass{
+public class RubberDuckTest extends InitClass {
 
     @Test
     public void findRubberDucksTest() {

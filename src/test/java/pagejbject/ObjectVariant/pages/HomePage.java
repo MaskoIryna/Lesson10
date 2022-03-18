@@ -1,6 +1,5 @@
-package pagejbject.pages;
+package pagejbject.ObjectVariant.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class HomePage {

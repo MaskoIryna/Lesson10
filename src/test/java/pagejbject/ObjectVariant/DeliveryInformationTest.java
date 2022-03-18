@@ -1,8 +1,8 @@
-package pagejbject;
+package pagejbject.ObjectVariant;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pagejbject.pages.DeliveryInformationPage;
-import pagejbject.pages.InitClass;
+import pagejbject.ObjectVariant.pages.DeliveryInformationPage;
+import pagejbject.ObjectVariant.pages.InitClass;
 
 public class DeliveryInformationTest extends InitClass {
 

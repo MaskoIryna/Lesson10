@@ -1,8 +1,8 @@
-package pagejbject;
+package pagejbject.ObjectVariant;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pagejbject.pages.InitClass;
-import pagejbject.pages.TermsConditionsPage;
+import pagejbject.ObjectVariant.pages.InitClass;
+import pagejbject.ObjectVariant.pages.TermsConditionsPage;
 
 public class TermsConditionsTest extends InitClass {
     @Test
