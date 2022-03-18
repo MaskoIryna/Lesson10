@@ -14,30 +14,31 @@ public class Lesson12Test {
         driver = new ChromeDriver();
         driver.get("https://litecart.stqa.ru/en/");
     }
-//Test get title jf https://litecart.stqa.ru/en/
+    //Test get title jf https://litecart.stqa.ru/en/
     @Test
-    public void InitTest() {
-        String expected = driver.getTitle();
-        String actual = "Online Store | My Store1";
+    public void initTest() {
+        String actual = driver.getTitle();
+        String expected = "Online Store | My Store1";
         Assert.assertEquals(actual,expected);
     }
-//Test go to Rubber Ducks
+    //Test go to Rubber Ducks
     @Test
-    public  void findRubberDucks() {
-        driver.findElement(By.linkText("Rubber Ducks")).sendKeys(Keys.ENTER);
-        Assert.assertEquals("Rubber Ducks | My Store1",driver.getTitle());
+    public  void findRubberDucksTest() {
+        driver.findElement(By.linkText("Rubber Ducks")).click();
+        String expected ="Rubber Ducks | My Store1";
+        Assert.assertEquals(driver.getTitle(),expected);
     }
-//Test go to Delivery Information
+    //Test go to Delivery Information
     @Test
-    public void findDeliveryInformation() {
+    public void findDeliveryInformationTest() {
         driver.findElement(By.linkText("Delivery Information")).click();
-        String expected = driver.findElement(By.cssSelector("#box-information-links>.title")).getText();
-        String actual = "Information";
+        String actual = driver.findElement(By.cssSelector("#box-information-links>.title")).getText();
+        String expected = "Information";
         Assert.assertEquals(actual,expected);
     }
-//Test go to TermsConditions
+    //Test go to TermsConditions
     @Test
-    public void findTermsConditions() {
+    public void findTermsConditionsTest() {
         driver.findElement(By.xpath("//*[@id='site-menu']/ul/li[5]/a")).click();
         String result = driver.findElement(By.cssSelector("#main > div.middle > div.content > h1 > font > font > u")).
                 getText();

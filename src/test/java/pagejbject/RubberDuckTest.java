@@ -7,10 +7,10 @@ import pagejbject.pages.RubberDucksPage;
 public class RubberDuckTest extends InitClass{
 
     @Test
-    public void findRubberDucks() {
+    public void findRubberDucksTest() {
         RubberDucksPage rubberDucksPage = new RubberDucksPage(driver);
 
         rubberDucksPage.clickRubberDucksBottom();
-        Assert.assertEquals(rubberDucksPage.actualTitle, rubberDucksPage.getTitleRubberDucksSting());
+        Assert.assertEquals(rubberDucksPage.getTitleRubberDucksSting(),rubberDucksPage.expectedTitle);
     }
 }

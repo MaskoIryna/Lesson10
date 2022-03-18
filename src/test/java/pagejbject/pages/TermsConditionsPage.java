@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 public class TermsConditionsPage {
     private By bottomTermsConditions = By.xpath("//*[@id='site-menu']/ul/li[5]/a");
     private By pageContain = By.cssSelector("#main > div.middle > div.content > h1 > font > font > u");
-    public String actualPageContain = "Условия";
+    public String expectedPageContain = "Условия";
     private WebDriver driver;
 
     public TermsConditionsPage(WebDriver driver){

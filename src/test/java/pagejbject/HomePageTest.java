@@ -8,9 +8,9 @@ import pagejbject.pages.InitClass;
 public class HomePageTest extends InitClass {
 
     @Test
-    public void getTitleHomePage() {
+    public void getTitleHomePageTest() {
         HomePage homePage = new HomePage(driver);
-        Assert.assertEquals(homePage.actual,homePage.getTitle());
+        Assert.assertEquals(homePage.getTitle(),homePage.expected);
     }
 
 

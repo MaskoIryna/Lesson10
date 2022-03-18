@@ -11,9 +11,9 @@ import java.time.Duration;
 
 
 public class Lesson13FrameTest {
-// Test go to https://the-internet.herokuapp.com/iframe and write something
+    // Test go to https://the-internet.herokuapp.com/iframe and write something
     @Test
-    public void FrameTest() {
+    public void goFrameAndWriteTest() {
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://the-internet.herokuapp.com/");
@@ -31,9 +31,10 @@ public class Lesson13FrameTest {
         driver.switchTo().defaultContent();
         driver.findElement(By.xpath("//button[@title='Italic']")).click();
         driver.switchTo().frame("mce_0_ifr");
-        String expected = driver.findElement(By.tagName("p")).getText();
+        String actual = driver.findElement(By.tagName("p")).getText();
         driver.switchTo().defaultContent();
-        Assert.assertEquals("Hello World",expected);
+        String expected = "Hello World";
+        Assert.assertEquals(actual,expected);
         driver.quit();
 
 

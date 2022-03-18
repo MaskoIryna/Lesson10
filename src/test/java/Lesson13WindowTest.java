@@ -8,35 +8,36 @@ import org.testng.annotations.Test;
 
 public class Lesson13WindowTest {
 
-        WebDriver driver;
+    WebDriver driver;
 
-        @BeforeTest
-        public void setup()  {
-            driver = new ChromeDriver();
-            driver.get("https://the-internet.herokuapp.com/");
-            }
-        @Test
+    @BeforeTest
+    public void setup()  {
+        driver = new ChromeDriver();
+        driver.get("https://the-internet.herokuapp.com/");
+    }
+    @Test
 //Test go to https://the-internet.herokuapp.com/windows and click "Click Here"(new windows)
-        public void newTest() {
-            String initHandle = driver.getWindowHandle();
-            driver.findElement(By.linkText("Multiple Windows")).click();
-            driver.findElement(By.linkText("Click Here")).click();
+    public void multipleWindowsTest() {
+        String initHandle = driver.getWindowHandle();
+        driver.findElement(By.linkText("Multiple Windows")).click();
+        driver.findElement(By.linkText("Click Here")).click();
 
-            String newHandle = driver.getWindowHandles().toArray()[1].toString();
-            driver.switchTo().window(newHandle);
-            String expected = driver.findElement(By.tagName("h3")).getText();
-            Assert.assertEquals("New Window",expected);
-            driver.close();
-            driver.switchTo().window(initHandle);
-        }
+        String newHandle = driver.getWindowHandles().toArray()[1].toString();
+        driver.switchTo().window(newHandle);
+        String actual = driver.findElement(By.tagName("h3")).getText();
 
-        @AfterTest
-        public void goOut() {
-            driver.quit();
+        Assert.assertEquals(actual,"New Window");
+        driver.close();
+        driver.switchTo().window(initHandle);
+    }
+
+    @AfterTest
+    public void goOut() {
+        driver.quit();
 
 
-
-        }
 
     }
+
+}
 

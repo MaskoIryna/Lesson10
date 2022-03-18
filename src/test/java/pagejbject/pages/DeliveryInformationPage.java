@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 public class DeliveryInformationPage {
     private By bottomDeliveryInformation = By.linkText("Delivery Information");
     private By titleDeliveryInformation = By.cssSelector("#box-information-links>.title");
-    public String actualTitle = "Information";
+    public String expectedTitle = "Information";
     private WebDriver driver;
 
     public DeliveryInformationPage(WebDriver driver){
@@ -26,14 +26,6 @@ public class DeliveryInformationPage {
     }
     }
 
-
-//    @Test
-//    public void findDeliveryInformation() {
-//        driver.findElement(By.linkText("Delivery Information")).click();
-//        String expected = driver.findElement(By.cssSelector("#box-information-links>.title")).getText();
-//        String actual = "Information";
-//        Assert.assertEquals(actual,expected);
-//    }
 
 
 

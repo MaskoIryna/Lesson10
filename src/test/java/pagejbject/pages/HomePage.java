@@ -4,15 +4,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class HomePage {
-    public String actual = "Online Store | My Store1";
+    public String expected = "Online Store | My Store1";
     private WebDriver driver;
 
     public HomePage(WebDriver driver){
         this.driver = driver;
     }
     public String getTitle() {
-        String expected = driver.getTitle();
-        return expected;
+        String actual = driver.getTitle();
+        return actual;
     }
 
 

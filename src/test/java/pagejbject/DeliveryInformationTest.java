@@ -7,10 +7,10 @@ import pagejbject.pages.InitClass;
 public class DeliveryInformationTest extends InitClass {
 
     @Test
-    public void findDeliveryInformation() {
+    public void findDeliveryInformationTest() {
         DeliveryInformationPage deliveryInformationPage = new DeliveryInformationPage(driver);
 
         deliveryInformationPage.clickDeliveryInformationBottom();
-        Assert.assertEquals(deliveryInformationPage.actualTitle,deliveryInformationPage.getDeliveryInformationTitle());
+        Assert.assertEquals(deliveryInformationPage.getDeliveryInformationTitle(),deliveryInformationPage.expectedTitle);
     }
 }

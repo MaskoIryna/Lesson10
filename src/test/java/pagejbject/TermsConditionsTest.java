@@ -6,14 +6,14 @@ import pagejbject.pages.TermsConditionsPage;
 
 public class TermsConditionsTest extends InitClass {
     @Test
-    public void findTermsConditions() {
+    public void findTermsConditionsTest() {
         TermsConditionsPage termsConditionsPage = new TermsConditionsPage(driver);
 
         termsConditionsPage.clickTermsConditionsBottom();
 
         String result = termsConditionsPage.getPageContain();
 
-        boolean infoTermsConditions = result.contains(termsConditionsPage.actualPageContain);
+        boolean infoTermsConditions = result.contains(termsConditionsPage.expectedPageContain);
         Assert.assertTrue(infoTermsConditions);
 
     }
