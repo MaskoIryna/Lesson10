@@ -3,12 +3,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import pageObject.FactoryPage.TestBase;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 
-public class RubberDucksPage extends InitClass{
+public class RubberDucksPage extends TestBase {
     WebDriver driver;
     @FindBy(linkText = "Rubber Ducks" )
     private WebElement bottomRubberDucks;

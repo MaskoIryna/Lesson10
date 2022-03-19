@@ -3,9 +3,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObject.FactoryPage.pages.DeliveryInformationPage;
-import pageObject.FactoryPage.pages.InitClass;
 
-public class DeliveryInformationTest extends InitClass {
+public class DeliveryInformationTest extends TestBase {
 
     @Test
     public void findDeliveryInformationTest() {

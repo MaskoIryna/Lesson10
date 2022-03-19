@@ -1,10 +1,11 @@
-package pageObject.FactoryPage.pages;
+package pageObject.FactoryPage;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
-public class InitClass {
+public class TestBase {
         protected WebDriver driver;
         protected String baseURL = "https://litecart.stqa.ru/en/";
 
@@ -19,3 +20,6 @@ public class InitClass {
             driver.quit();
         }
     }
+
+
+

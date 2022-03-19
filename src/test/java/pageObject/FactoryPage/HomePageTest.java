@@ -3,9 +3,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObject.FactoryPage.pages.HomePage;
-import pageObject.FactoryPage.pages.InitClass;
 
-    public class HomePageTest extends InitClass {
+public class HomePageTest extends TestBase {
 
     @Test
     public void getTitleHomePageTest() {

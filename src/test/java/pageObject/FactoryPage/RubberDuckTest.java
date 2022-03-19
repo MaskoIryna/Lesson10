@@ -2,10 +2,9 @@ package pageObject.FactoryPage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageObject.FactoryPage.pages.InitClass;
 import pageObject.FactoryPage.pages.RubberDucksPage;
 
-public class RubberDuckTest extends InitClass{
+public class RubberDuckTest extends TestBase{
 
     @Test
     public void findRubberDucksTest() {
