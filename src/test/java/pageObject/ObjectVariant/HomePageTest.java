@@ -3,7 +3,6 @@ package pageObject.ObjectVariant;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObject.ObjectVariant.pages.HomePage;
-import pageObject.ObjectVariant.pages.InitClass;
 
 public class HomePageTest extends TestBase {
 

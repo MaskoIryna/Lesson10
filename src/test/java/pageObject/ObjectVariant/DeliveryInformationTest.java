@@ -2,7 +2,6 @@ package pageObject.ObjectVariant;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObject.ObjectVariant.pages.DeliveryInformationPage;
-import pageObject.ObjectVariant.pages.InitClass;
 
 public class DeliveryInformationTest extends TestBase {
 

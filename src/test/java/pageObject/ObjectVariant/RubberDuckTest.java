@@ -1,7 +1,6 @@
 package pageObject.ObjectVariant;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageObject.ObjectVariant.pages.InitClass;
 import pageObject.ObjectVariant.pages.RubberDucksPage;
 
 public class RubberDuckTest extends TestBase {
