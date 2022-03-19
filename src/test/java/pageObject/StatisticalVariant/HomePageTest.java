@@ -3,9 +3,8 @@ package pageObject.StatisticalVariant;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObject.StatisticalVariant.pages.HomePage;
-import pageObject.StatisticalVariant.pages.InitClass;
 
-public class HomePageTest extends InitClass {
+public class HomePageTest extends TestBase {
 
     @Test
     public void getTitleHomePageTest() {

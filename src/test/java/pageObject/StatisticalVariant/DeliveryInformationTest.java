@@ -3,9 +3,8 @@ package pageObject.StatisticalVariant;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObject.StatisticalVariant.pages.DeliveryInformationPage;
-import pageObject.StatisticalVariant.pages.InitClass;
 
-public class DeliveryInformationTest extends InitClass {
+public class DeliveryInformationTest extends TestBase {
 
     @Test
     public void findDeliveryInformationTest() {

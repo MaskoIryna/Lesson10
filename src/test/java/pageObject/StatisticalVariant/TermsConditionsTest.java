@@ -1,10 +1,9 @@
 package pageObject.StatisticalVariant;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageObject.StatisticalVariant.pages.InitClass;
 import pageObject.StatisticalVariant.pages.TermsConditionsPage;
 
-public class TermsConditionsTest extends InitClass {
+public class TermsConditionsTest extends TestBase {
     @Test
     public void findTermsConditionsTest() {
 
