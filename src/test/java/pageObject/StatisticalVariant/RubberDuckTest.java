@@ -1,5 +1,4 @@
 package pageObject.StatisticalVariant;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObject.StatisticalVariant.pages.InitClass;

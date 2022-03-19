@@ -3,8 +3,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class TermsConditionsPage {
-    private static By bottomTermsConditions = By.xpath("//*[@id='site-menu']/ul/li[5]/a");
-    private static By pageContain = By.cssSelector("#main > div.middle > div.content > h1 > font > font > u");
+    private static final By bottomTermsConditions = By.xpath("//*[@id='site-menu']/ul/li[5]/a");
+    private static final By pageContain = By.cssSelector("#main > div.middle > div.content > h1 > font > font > u");
     public static String expectedPageContain = "Условия";
 
 

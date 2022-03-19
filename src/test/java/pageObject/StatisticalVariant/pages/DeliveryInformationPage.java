@@ -5,8 +5,8 @@ import org.openqa.selenium.WebDriver;
 
 
 public class DeliveryInformationPage {
-    private static By bottomDeliveryInformation = By.linkText("Delivery Information");
-    private static By titleDeliveryInformation = By.cssSelector("#box-information-links>.title");
+    private static final By bottomDeliveryInformation = By.linkText("Delivery Information");
+    private static final By titleDeliveryInformation = By.cssSelector("#box-information-links>.title");
     public static String expectedTitle = "Information";
 
 
@@ -15,8 +15,7 @@ public class DeliveryInformationPage {
     }
 
     public static String getDeliveryInformationTitle(WebDriver driver) {
-        String expected = driver.findElement(titleDeliveryInformation).getText();
-        return  expected;
+        return  driver.findElement(titleDeliveryInformation).getText();
 
     }
     }
