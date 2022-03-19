@@ -1,4 +1,4 @@
-package pageObject.pagejbject.ObjectVariant.pages;
+package pageObject.ObjectVariant.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 

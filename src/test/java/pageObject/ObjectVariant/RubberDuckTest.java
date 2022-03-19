@@ -1,8 +1,8 @@
-package pageObject.pagejbject.ObjectVariant;
+package pageObject.ObjectVariant;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageObject.pagejbject.ObjectVariant.pages.InitClass;
-import pageObject.pagejbject.ObjectVariant.pages.RubberDucksPage;
+import pageObject.ObjectVariant.pages.InitClass;
+import pageObject.ObjectVariant.pages.RubberDucksPage;
 
 public class RubberDuckTest extends InitClass {
 

@@ -1,9 +1,9 @@
-package pageObject.pagejbject.StatisticalVariant;
+package pageObject.StatisticalVariant;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageObject.pagejbject.StatisticalVariant.pages.InitClass;
-import pageObject.pagejbject.StatisticalVariant.pages.RubberDucksPage;
+import pageObject.StatisticalVariant.pages.InitClass;
+import pageObject.StatisticalVariant.pages.RubberDucksPage;
 
 public class RubberDuckTest extends InitClass {
 

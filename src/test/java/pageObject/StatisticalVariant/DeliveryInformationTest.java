@@ -1,9 +1,9 @@
-package pageObject.pagejbject.StatisticalVariant;
+package pageObject.StatisticalVariant;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageObject.pagejbject.StatisticalVariant.pages.DeliveryInformationPage;
-import pageObject.pagejbject.StatisticalVariant.pages.InitClass;
+import pageObject.StatisticalVariant.pages.DeliveryInformationPage;
+import pageObject.StatisticalVariant.pages.InitClass;
 
 public class DeliveryInformationTest extends InitClass {
 

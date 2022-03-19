@@ -1,4 +1,4 @@
-package pageObject.pagejbject.StatisticalVariant.pages;
+package pageObject.StatisticalVariant.pages;
 import org.openqa.selenium.WebDriver;
 
 public class HomePage {

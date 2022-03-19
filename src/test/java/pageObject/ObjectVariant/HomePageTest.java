@@ -1,9 +1,9 @@
-package pageObject.pagejbject.ObjectVariant;
+package pageObject.ObjectVariant;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageObject.pagejbject.ObjectVariant.pages.HomePage;
-import pageObject.pagejbject.ObjectVariant.pages.InitClass;
+import pageObject.ObjectVariant.pages.HomePage;
+import pageObject.ObjectVariant.pages.InitClass;
 
 public class HomePageTest extends InitClass {
 

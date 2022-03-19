@@ -1,4 +1,4 @@
-package pageObject.pagejbject.ObjectVariant.pages;
+package pageObject.ObjectVariant.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
