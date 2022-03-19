@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 import pageObject.ObjectVariant.pages.DeliveryInformationPage;
 import pageObject.ObjectVariant.pages.InitClass;
 
-public class DeliveryInformationTest extends InitClass {
+public class DeliveryInformationTest extends TestBase {
 
     @Test
     public void findDeliveryInformationTest() {

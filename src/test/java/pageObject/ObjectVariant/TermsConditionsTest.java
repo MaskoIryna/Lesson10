@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 import pageObject.ObjectVariant.pages.InitClass;
 import pageObject.ObjectVariant.pages.TermsConditionsPage;
 
-public class TermsConditionsTest extends InitClass {
+public class TermsConditionsTest extends TestBase {
     @Test
     public void findTermsConditionsTest() {
         TermsConditionsPage termsConditionsPage = new TermsConditionsPage(driver);

@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import pageObject.ObjectVariant.pages.HomePage;
 import pageObject.ObjectVariant.pages.InitClass;
 
-public class HomePageTest extends InitClass {
+public class HomePageTest extends TestBase {
 
     @Test
     public void getTitleHomePageTest() {

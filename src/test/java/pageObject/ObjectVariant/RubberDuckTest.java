@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 import pageObject.ObjectVariant.pages.InitClass;
 import pageObject.ObjectVariant.pages.RubberDucksPage;
 
-public class RubberDuckTest extends InitClass {
+public class RubberDuckTest extends TestBase {
 
     @Test
     public void findRubberDucksTest() {
