@@ -10,7 +10,7 @@ import java.util.Collections;
 import java.util.List;
 
 
-public class RubberDucksPage extends TestBase {
+public class RubberDucksPage {
     WebDriver driver;
     @FindBy(linkText = "Rubber Ducks" )
     private WebElement bottomRubberDucks;
