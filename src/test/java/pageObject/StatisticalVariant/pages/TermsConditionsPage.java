@@ -1,10 +1,11 @@
 package pageObject.StatisticalVariant.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import pageObject.StatisticalVariant.Helper.Locators;
 
 public class TermsConditionsPage {
-    private static final By bottomTermsConditions = By.xpath("//*[@id='site-menu']/ul/li[5]/a");
-    private static final By pageContain = By.cssSelector("#main > div.middle > div.content > h1 > font > font > u");
+    private static final By bottomTermsConditions = Locators.getLocator("TermsConditionsPage.bottomTermsConditions");
+    private static final By pageContain = Locators.getLocator("TermsConditionsPage.pageContain");
     public static String expectedPageContain = "Условия";
 
 

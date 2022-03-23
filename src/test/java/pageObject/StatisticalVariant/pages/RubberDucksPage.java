@@ -3,19 +3,21 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import pageObject.StatisticalVariant.Helper.Locators;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 
 public class RubberDucksPage {
-    final static By bottomRubberDucks = By.linkText("Rubber Ducks");
-    final static By elementSubcategory = By.linkText("Subcategory");
-    final static By elementSale = By.xpath("//img[@alt='Yellow Duck']/following-sibling::div");
-    final static By locatorElementRD_Name = By.xpath("//div[@class='name']");
-    final static By locatorElementPrice = By.xpath("//span[@class='price']");
-    final static By locatorGreenDuck = By.xpath("//a[@class='link'][@title='Green DucK']");
-    final static By locatorTextPrice = By.xpath("//*[contains(text(),'Price')]");
+    final static By bottomRubberDucks = Locators.getLocator("RubberDucksPage.bottomRubberDucks");
+    final static By elementSubcategory = Locators.getLocator("RubberDucksPage.elementSubcategory");
+    final static By elementSale = Locators.getLocator("RubberDucksPage.elementSale");
+    final static By locatorElementRD_Name = Locators.getLocator("RubberDucksPage.locatorElementRD_Name");
+    final static By locatorElementPrice = Locators.getLocator("RubberDucksPage.locatorElementPrice");
+    final static By locatorGreenDuck = Locators.getLocator("RubberDucksPage.locatorGreenDuck");
+    final static By locatorTextPrice = Locators.getLocator("RubberDucksPage.locatorTextPrice");
     final static String elementRD_NameClick = "//*[contains(text(),'Name')]";
     public static String expectedTitleRD = "Rubber Ducks | My Store1";
     public static String expectedTitleSubcategory = "Subcategory | My Store1";
